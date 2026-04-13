@@ -1,0 +1,20 @@
+{
+  "name": "dependency-updater-ai-mcp",
+  "description": "MEOK AI Labs \u2014 dependency-updater-ai-mcp \u2014 Check and suggest dependency updates.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/dependency-updater-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Developer Tools",
+    "Package Management"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
