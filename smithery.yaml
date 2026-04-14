@@ -1,10 +1,31 @@
 name: dependency-updater-ai-mcp
-description: "MEOK AI Labs — dependency-updater-ai-mcp — Check and suggest dependency updates."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/dependency-updater-ai-mcp
-license: MIT
-categories: [Developer Tools, Package Management]
-tags: [dependency-management, package-updates, npm, pip, version-management]
-runtime: python
-entrypoint: server.py
+description: "dependency-updater-ai-mcp \u2014 Check and suggest dependency updates."
+version: 1.0.0
+tools:
+- name: check_outdated
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: package_json_content
+    type: string
+    required: true
+- name: suggest_updates
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: requirements_txt
+    type: string
+    required: true
+- name: security_audit
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: dependencies
+    type: string
+    required: true
+- name: generate_lockfile_diff
+  description: MEOK AI Labs tool.
+  parameters:
+  - name: old_deps
+    type: string
+    required: true
+  - name: new_deps
+    type: string
+    required: true

@@ -1,20 +1,71 @@
 {
   "name": "dependency-updater-ai-mcp",
-  "description": "MEOK AI Labs \u2014 dependency-updater-ai-mcp \u2014 Check and suggest dependency updates.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/dependency-updater-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "dependency-updater-ai-mcp \u2014 Check and suggest dependency updates.",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Developer Tools",
-    "Package Management"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "check_outdated",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "package_json_content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "package_json_content"
+        ]
+      }
+    },
+    {
+      "name": "suggest_updates",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "requirements_txt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "requirements_txt"
+        ]
+      }
+    },
+    {
+      "name": "security_audit",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dependencies": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dependencies"
+        ]
+      }
+    },
+    {
+      "name": "generate_lockfile_diff",
+      "description": "MEOK AI Labs tool.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "old_deps": {
+            "type": "string"
+          },
+          "new_deps": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "old_deps",
+          "new_deps"
+        ]
+      }
+    }
+  ]
 }
