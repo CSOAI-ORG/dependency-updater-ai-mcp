@@ -1,5 +1,6 @@
 name: dependency-updater-ai-mcp
-description: "MEOK AI Labs \u2014 Check and update package dependencies."
+description: 'Dependency Updater Ai MCP server. Tools: check outdated, suggest updates,
+  security audit. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: check_outdated
