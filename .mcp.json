@@ -1,6 +1,6 @@
 {
   "name": "dependency-updater-ai-mcp",
-  "description": "dependency-updater-ai-mcp \u2014 Check and suggest dependency updates.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Check and update package dependencies.",
   "version": "1.0.0",
   "tools": [
     {
