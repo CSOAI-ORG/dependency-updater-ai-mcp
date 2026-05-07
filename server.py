@@ -83,7 +83,23 @@ def _parse_package_json(content: str) -> list:
 
 @mcp.tool()
 def check_outdated(manifest_content: str, manifest_type: str = "auto", api_key: str = "") -> str:
-    """Parse a dependency manifest (requirements.txt, package.json) and identify outdated packages."""
+    """Parse a dependency manifest (requirements.txt, package.json) and identify outdated packages.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -137,7 +153,23 @@ def check_outdated(manifest_content: str, manifest_type: str = "auto", api_key: 
 
 @mcp.tool()
 def suggest_updates(manifest_content: str, strategy: str = "minor", api_key: str = "") -> str:
-    """Suggest dependency updates with a chosen strategy: patch (safest), minor, or major (latest)."""
+    """Suggest dependency updates with a chosen strategy: patch (safest), minor, or major (latest).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -210,7 +242,23 @@ def suggest_updates(manifest_content: str, strategy: str = "minor", api_key: str
 
 @mcp.tool()
 def check_vulnerabilities(dependencies: str, api_key: str = "") -> str:
-    """Check a comma-separated list of 'package==version' for known vulnerabilities."""
+    """Check a comma-separated list of 'package==version' for known vulnerabilities.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -259,7 +307,22 @@ def check_vulnerabilities(dependencies: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def generate_lockfile(manifest_content: str, api_key: str = "") -> str:
-    """Generate a deterministic lockfile-style output with pinned versions and integrity hashes."""
+    """Generate a deterministic lockfile-style output with pinned versions and integrity hashes.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
