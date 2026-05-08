@@ -1,45 +1,58 @@
-[![dependency-updater-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/dependency-updater-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/dependency-updater-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/dependency-updater-ai-mcp)](https://pypi.org/project/dependency-updater-ai-mcp/)
-
-[![dependency-updater-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/dependency-updater-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/dependency-updater-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/dependency-updater-ai-mcp)](https://github.com/CSOAI-ORG/dependency-updater-ai-mcp/stargazers)
+# Dependency Updater Ai MCP
 
-# udependencyU updaterU aiU mcp
+**MCP server for dependency updater ai mcp operations**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/dependency-updater-ai-mcp)](https://www.npmjs.com/package/@meok-ai/dependency-updater-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-dependency-updater-ai-mcp)](https://pypi.org/project/meok-dependency-updater-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/dependency-updater-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Dependency Updater Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `check_outdated` | Parse a dependency manifest (requirements.txt, package.json) and identify outdat |
+| `suggest_updates` | Suggest dependency updates with a chosen strategy: patch (safest), minor, or maj |
+| `check_vulnerabilities` | Check a comma-separated list of 'package==version' for known vulnerabilities. |
+| `generate_lockfile` | Generate a deterministic lockfile-style output with pinned versions and integrit |
 
 ## Installation
 
 ```bash
-pip install dependency-updater-ai-mcp
-# or
-npm install -g @meok-ai/dependency-updater-ai-mcp
+pip install meok-dependency-updater-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "dependency-updater-ai": {
+      "command": "python",
+      "args": ["-m", "meok_dependency_updater_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/dependency-updater-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
