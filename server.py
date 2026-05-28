@@ -2,7 +2,6 @@
 """Check and update package dependencies for Python, Node.js, and Rust projects. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, re
@@ -122,7 +121,7 @@ def check_outdated(manifest_content: str, manifest_type: str = "auto", api_key: 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -212,7 +211,7 @@ def suggest_updates(manifest_content: str, strategy: str = "minor", api_key: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -320,7 +319,7 @@ def check_vulnerabilities(dependencies: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -403,7 +402,7 @@ def generate_lockfile(manifest_content: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -415,6 +414,15 @@ def generate_lockfile(manifest_content: str, api_key: str = "") -> str:
         manifest_type = "requirements.txt"
 
     import hashlib
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
     locked = []
     for dep in deps:
         version = dep["version"] if dep["version"] != "unknown" else "0.0.1"
@@ -440,5 +448,8 @@ def generate_lockfile(manifest_content: str, api_key: str = "") -> str:
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
