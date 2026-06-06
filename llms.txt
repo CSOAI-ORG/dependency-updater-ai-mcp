@@ -1,0 +1,31 @@
+# Dependency Updater Ai MCP
+
+> Dependency Updater MCP — automation tooling for dependency updater
+
+`dependency-updater-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install dependency-updater-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx dependency-updater-ai-mcp
+```
+
+## Tools
+
+- `check_outdated` — Parse a dependency manifest (requirements.txt, package.json) and identify outdated packages.
+- `suggest_updates` — Suggest dependency updates with a chosen strategy: patch (safest), minor, or major (latest).
+- `check_vulnerabilities` — Check a comma-separated list of 'package==version' for known vulnerabilities.
+- `generate_lockfile` — Generate a deterministic lockfile-style output with pinned versions and integrity hashes.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/dependency-updater-ai-mcp
+- PyPI: https://pypi.org/project/dependency-updater-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
