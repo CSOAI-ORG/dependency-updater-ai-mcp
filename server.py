@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Check and update package dependencies for Python, Node.js, and Rust projects. — MEOK AI Labs."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+Check and update package dependencies for Python, Node.js, and Rust projects. — MEOK AI Labs."""
 
 import sys, os
 from auth_middleware import check_access
