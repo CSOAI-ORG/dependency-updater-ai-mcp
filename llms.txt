@@ -1,31 +1,33 @@
-# Dependency Updater Ai MCP
-
-> Dependency Updater MCP — automation tooling for dependency updater
-
-`dependency-updater-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# dependency-updater-ai-mcp
+# **MCP server for dependency updater ai mcp operations**
 
 ## Install
-
 ```bash
 pip install dependency-updater-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx dependency-updater-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `check_outdated` — Parse a dependency manifest (requirements.txt, package.json) and identify outdated packages.
-- `suggest_updates` — Suggest dependency updates with a chosen strategy: patch (safest), minor, or major (latest).
-- `check_vulnerabilities` — Check a comma-separated list of 'package==version' for known vulnerabilities.
-- `generate_lockfile` — Generate a deterministic lockfile-style output with pinned versions and integrity hashes.
+### `check_outdated`
+Parse a dependency manifest (requirements.txt, package.json) and identify outdated packages.
 
-## Links
+### `suggest_updates`
+Suggest dependency updates with a chosen strategy: patch (safest), minor, or major (latest).
 
-- Source: https://github.com/CSOAI-ORG/dependency-updater-ai-mcp
-- PyPI: https://pypi.org/project/dependency-updater-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `check_vulnerabilities`
+Check a comma-separated list of 'package==version' for known vulnerabilities.
+
+### `generate_lockfile`
+Generate a deterministic lockfile-style output with pinned versions and integrity hashes.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 Check and update package dependencies for Python, Node.js, and Rust projects. — MEOK AI Labs."""
 
 import sys, os

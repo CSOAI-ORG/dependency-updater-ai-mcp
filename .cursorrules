@@ -1,0 +1,9 @@
+# dependency-updater-ai-mcp - Auto-trigger Rules
+
+When the user asks about dependency updater, use dependency-updater-ai-mcp tools: check_outdated, suggest_updates, check_vulnerabilities, generate_lockfile
+
+**MCP server for dependency updater ai mcp operations**
+
+Install: `pip install dependency-updater-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

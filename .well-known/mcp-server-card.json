@@ -1,0 +1,25 @@
+{
+  "name": "dependency-updater-ai-mcp",
+  "title": "Dependency Updater Ai Mcp",
+  "description": "Dependency Updater Ai MCP server. Tools: check outdated, suggest updates, security audit. Built by MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "check_outdated"
+    },
+    {
+      "name": "suggest_updates"
+    },
+    {
+      "name": "check_vulnerabilities"
+    },
+    {
+      "name": "generate_lockfile"
+    }
+  ]
+}
