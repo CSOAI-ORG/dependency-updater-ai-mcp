@@ -1,0 +1,59 @@
+{
+  "name": "dependency-updater-ai-mcp",
+  "description": "Dependency Updater Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/dependency-updater-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "check_outdated",
+      "name": "Check Outdated",
+      "description": "check_outdated via dependency-updater-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_updates",
+      "name": "Suggest Updates",
+      "description": "suggest_updates via dependency-updater-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_vulnerabilities",
+      "name": "Check Vulnerabilities",
+      "description": "check_vulnerabilities via dependency-updater-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_lockfile",
+      "name": "Generate Lockfile",
+      "description": "generate_lockfile via dependency-updater-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

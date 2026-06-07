@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "dependency-updater-ai-mcp",
+    "description": "Dependency Updater Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "dependency-updater-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "check_outdated",
+      "suggest_updates",
+      "check_vulnerabilities",
+      "generate_lockfile"
+    ]
+  }
+}
