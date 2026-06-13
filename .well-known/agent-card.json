@@ -1,0 +1,100 @@
+{
+  "name": "Dependency Updater Ai Mcp",
+  "version": "1.0.7",
+  "url": "https://mcp.meok.ai/dependency-updater-ai-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Dependency Updater Ai MCP server. Tools: check outdated, suggest updates, security audit. Built by MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "check_outdated",
+      "name": "Check Outdated",
+      "description": "Check Outdated — a tool of the dependency-updater-ai-mcp MCP.",
+      "tags": [
+        "audit",
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "suggest_updates",
+      "name": "Suggest Updates",
+      "description": "Suggest Updates — a tool of the dependency-updater-ai-mcp MCP.",
+      "tags": [
+        "audit",
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_vulnerabilities",
+      "name": "Check Vulnerabilities",
+      "description": "Check Vulnerabilities — a tool of the dependency-updater-ai-mcp MCP.",
+      "tags": [
+        "audit",
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "generate_lockfile",
+      "name": "Generate Lockfile",
+      "description": "Generate Lockfile — a tool of the dependency-updater-ai-mcp MCP.",
+      "tags": [
+        "audit",
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "dependency-updater-ai-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
