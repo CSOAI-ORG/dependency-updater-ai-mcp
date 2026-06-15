@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/dependency-updater-ai-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/dependency-updater-ai-mcp -->
 [![MCP Scorecard: 74/100](https://img.shields.io/badge/proofof.ai-74%2F100-5b21b6)](https://proofof.ai/scorecard/dependency-updater-ai-mcp.html)
 
 # Dependency Updater Ai MCP
@@ -113,3 +113,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "dependency-updater-ai-mcp": {
+      "command": "uvx",
+      "args": ["dependency-updater-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install dependency-updater-ai-mcp` then run the `dependency-updater-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `check_outdated` to …"
+- "Use `suggest_updates` to …"
+- "Use `check_vulnerabilities` to …"
